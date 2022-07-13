@@ -12,24 +12,10 @@ import SnapKit
 class ViewController: UIViewController, UITextFieldDelegate {
     private let bounds = UIScreen.main.bounds
     
-    lazy var titleLabel = UILabel().then {
-        $0.text = "로그인을 해주세요"
+    lazy var Logo = UILabel().then {
+        $0.text = "Who Are You"
         $0.textColor = .black
         $0.font = .boldSystemFont(ofSize: 25)
-    }
-
-    lazy var signUpButton = UIButton().then {
-        $0.setTitle("회원가입", for: .normal)
-        $0.backgroundColor = .black.withAlphaComponent(0.8)
-        $0.layer.cornerRadius = 10
-        $0.addTarget(self, action: #selector(SignUpAction), for: .touchUpInside)
-    }
-    
-    lazy var signInButton = UIButton().then {
-        $0.setTitle("로그인", for: .normal)
-        $0.backgroundColor = .black.withAlphaComponent(0.8)
-        $0.layer.cornerRadius = 10
-        $0.addTarget(self, action: #selector(LoginAction), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -40,38 +26,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func addView() {
-        [signUpButton, signInButton, titleLabel].forEach {
+        [Logo].forEach {
             view.addSubview($0)
         }
     }
     
-    @objc func LoginAction() {
-        let lvc = LoginViewController()
-        lvc.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(lvc, animated: true)
-        
-    }
-
-    @objc func SignUpAction() {
-        let svc = SignUpViewController()
-        svc.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(svc, animated: true)
-    }
-    
     private func setLayout() {
-        signUpButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.size.equalTo(bounds.height * 0.07)
-            $0.trailing.equalToSuperview().offset(-30)
-            $0.top.equalToSuperview().offset(500)
-            }
-        signInButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.size.equalTo(bounds.height * 0.07)
-            $0.trailing.equalToSuperview().offset(-30)
-            $0.top.equalToSuperview().offset(570)
-            }
-        titleLabel.snp.makeConstraints {
+        Logo.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(250)
         }
