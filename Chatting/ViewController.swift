@@ -21,8 +21,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     lazy var LogoText = UILabel().then {
         $0.text = "Who Are You"
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 26, weight: .bold)
+        //$0.textColor = .black
+        //$0.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        
+        let attributedString = NSMutableAttributedString(string: ($0.text!), attributes: [.font: UIFont.systemFont(ofSize: 24, weight: .medium), .foregroundColor: UIColor.black,])
+        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 30, weight: .medium), range: ($0.text! as NSString).range(of: "W"))
+        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 30, weight: .medium), range: ($0.text! as NSString).range(of: "A"))
+        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 30, weight: .medium), range: ($0.text! as NSString).range(of: "Y"))
+        $0.attributedText = attributedString
+        
+    }
+    
+    lazy var startButton = UIButton().then {
+        let text = NSAttributedString(string: "시작하기")
+        $0.setAttributedTitle(text, for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        $0.setTitleColor(UIColor.white, for: .normal)
+        $0.backgroundColor = .mainColor
+        $0.layer.cornerRadius = 10
     }
     
     lazy var Logo = UIImageView().then {
@@ -35,6 +51,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 22, weight: .light)
         $0.textAlignment = .center
+        
+        let attributedString = NSMutableAttributedString(string: ($0.text!), attributes: [.font: UIFont.systemFont(ofSize: 22, weight: .light), .foregroundColor: UIColor.black, .kern: 1.0])
+        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명"))
+        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명 채팅 서비스"))
+        $0.attributedText = attributedString
     }
     
     override func viewDidLoad() {
@@ -45,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func addView() {
-        [LogoImage,Explain,Logo,LogoText].forEach {
+        [LogoImage,Explain,Logo,LogoText, startButton].forEach {
             view.addSubview($0)
         }
     }
@@ -60,6 +81,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         LogoText.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.center.equalTo(LogoImage.snp.center).offset(0)
+            $0.trailing.equalTo(LogoImage.snp.trailing).offset(-57)
         }
         
         Logo.snp.makeConstraints {
@@ -71,6 +93,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(550)
         }
+        
+        startButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().offset(700)
+            $0.size.equalTo(bounds.height * 0.06)
+            $0.trailing.equalToSuperview().offset(-50)
+        }
     
     }
     
@@ -79,5 +108,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 extension UIColor {
     class var backGround: UIColor? {return UIColor(named: "backGround")}
+    class var mainColor: UIColor? {return UIColor(named: "mainColor")}
 }
 
