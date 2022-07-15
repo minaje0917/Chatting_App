@@ -39,6 +39,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.backgroundColor = .mainColor
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(startAction), for: .touchUpInside)
     }
     
     lazy var Logo = UIImageView().then {
@@ -56,6 +57,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명"))
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명 채팅 서비스"))
         $0.attributedText = attributedString
+    }
+    
+    @objc func startAction() {
+        //self.navigationController?.popViewController(animated: true)
+        let lvc = nickNameViewController()
+        lvc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(lvc, animated: true)
+        
     }
     
     override func viewDidLoad() {
