@@ -66,18 +66,90 @@
 		77002994287D119700C7704D /* Chatting */ = {
 			isa = PBXGroup;
 			children = (
-				77002995287D119700C7704D /* AppDelegate.swift */,
-				77002997287D119700C7704D /* SceneDelegate.swift */,
-				77002999287D119700C7704D /* ViewController.swift */,
-				770029BE2880322A00C7704D /* nickNameViewController.swift */,
-				770029C0288134DD00C7704D /* chattingViewController.swift */,
-				7700299B287D119700C7704D /* Main.storyboard */,
-				7700299E287D119B00C7704D /* Assets.xcassets */,
+				770029C328813D4C00C7704D /* Resources */,
+				770029C228813D4000C7704D /* Sources */,
 				770029A3287D119B00C7704D /* Info.plist */,
 				770029B9287FF73500C7704D /* LogoImage.png */,
 				770029BB287FF7F300C7704D /* Logo.png */,
 			);
 			path = Chatting;
+			sourceTree = "<group>";
+		};
+		770029C228813D4000C7704D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				770029C628813DE600C7704D /* VCs */,
+				770029CA28813E1900C7704D /* Models */,
+				770029C928813E1300C7704D /* Designs */,
+				770029C828813E0D00C7704D /* Cells */,
+				770029C728813E0600C7704D /* Classes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		770029C328813D4C00C7704D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				770029C528813DD900C7704D /* APIServices */,
+				770029C428813DB200C7704D /* Storyboards */,
+				77002995287D119700C7704D /* AppDelegate.swift */,
+				77002997287D119700C7704D /* SceneDelegate.swift */,
+				7700299E287D119B00C7704D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		770029C428813DB200C7704D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7700299B287D119700C7704D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		770029C528813DD900C7704D /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		770029C628813DE600C7704D /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				77002999287D119700C7704D /* ViewController.swift */,
+				770029BE2880322A00C7704D /* nickNameViewController.swift */,
+				770029C0288134DD00C7704D /* chattingViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		770029C728813E0600C7704D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		770029C828813E0D00C7704D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		770029C928813E1300C7704D /* Designs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Designs;
+			sourceTree = "<group>";
+		};
+		770029CA28813E1900C7704D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
