@@ -12,7 +12,16 @@ import SnapKit
 class nickNameViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+    }
 
+    func isFilled(_ textField: UITextField) -> Bool {
+        guard let text = textField.text, !text.isEmpty else {
+            return false
+        }
+        return true
+    }
     
     lazy var textLabel = UILabel().then {
         $0.text = "Who Are You? \n 당신의 닉네임을 입력하세요"
@@ -21,8 +30,14 @@ class nickNameViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 22, weight: .regular)
     }
     
+    lazy var wrongText = UILabel().then {
+        $0.text = "닉네임을 입력해주세요"
+        $0.textColor = .wrong
+        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+    }
+    
     lazy var nickNameField = UITextField().then {
-        $0.placeholder = "닉네임 입력"
+        $0.attributedPlaceholder = NSAttributedString(string: "닉네임 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.placeholder])
         $0.textAlignment = .center
         $0.layer.cornerRadius = 25
         $0.layer.backgroundColor = UIColor.white.cgColor
@@ -39,8 +54,27 @@ class nickNameViewController: UIViewController {
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.backgroundColor = .mainColor
         $0.layer.cornerRadius = 10
-        //$0.addTarget(self, action: #selector(startAction), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(enterAction), for: .touchUpInside)
     }
+    
+    @objc func enterAction() {
+        if isFilled(nickNameField) {
+            let lvc = chattingViewController()
+            lvc.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(lvc, animated: true)
+        }
+        else {
+            nickNameField.layer.borderWidth = 2
+            nickNameField.layer.borderColor = UIColor.wrong?.cgColor
+            nickNameField.attributedPlaceholder = NSAttributedString(string: "닉네임 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.wrong])
+            view.addSubview(wrongText)
+            wrongText.snp.makeConstraints {
+                $0.centerX.equalToSuperview()
+                $0.top.equalTo(nickNameField.snp.top).offset(60)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .backGround

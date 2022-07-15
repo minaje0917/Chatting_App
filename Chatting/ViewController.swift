@@ -57,7 +57,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명"))
         attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명 채팅 서비스"))
         $0.attributedText = attributedString
-    }
+    }   
     
     @objc func startAction() {
         //self.navigationController?.popViewController(animated: true)
@@ -118,5 +118,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 extension UIColor {
     class var backGround: UIColor? {return UIColor(named: "backGround")}
     class var mainColor: UIColor? {return UIColor(named: "mainColor")}
+    class var wrong: UIColor? {return UIColor(named: "wrong")}
+    class var placeholder: UIColor? {return UIColor(named: "placeholder")}
 }
 
