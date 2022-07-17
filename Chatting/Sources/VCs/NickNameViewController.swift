@@ -9,11 +9,11 @@ import UIKit
 import Then
 import SnapKit
 
-class nickNameViewController: UIViewController {
+class NickNameViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
+        self.view.endEditing(true)
     }
 
     func isFilled(_ textField: UITextField) -> Bool {
@@ -59,16 +59,8 @@ class nickNameViewController: UIViewController {
     
     @objc func enterAction() {
         if isFilled(nickNameField) {
-            let vc = chattingViewController()
-            let transition = CATransition()
-            transition.duration = 0.5
-            transition.type = CATransitionType.push
-            transition.subtype = CATransitionSubtype.fromRight
-            transition.timingFunction =
-            CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-            view.window!.layer.add(transition, forKey: kCATransition)
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: false, completion: nil)
+            let vc = ChattingViewController()
+            self.navigationController?.setViewControllers([vc], animated: true)
         }
         
         else {
