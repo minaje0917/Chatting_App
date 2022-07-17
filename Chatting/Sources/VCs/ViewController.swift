@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SnapKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+final class ViewController: UIViewController, UITextFieldDelegate {
     private let bounds = UIScreen.main.bounds
     
     lazy var LogoImage = UIImageView().then {

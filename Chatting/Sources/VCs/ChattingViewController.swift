@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SnapKit
 
-class ChattingViewController: UIViewController {
+final class ChattingViewController: UIViewController {
     private let navigationTitleLabel = UILabel().then {
         $0.text = "Who Are You"
         $0.font = .systemFont(ofSize: 22, weight: .medium)

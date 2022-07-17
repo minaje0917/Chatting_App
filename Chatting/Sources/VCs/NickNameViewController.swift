@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SnapKit
 
-class NickNameViewController: UIViewController {
+final class NickNameViewController: UIViewController {
     private let bounds = UIScreen.main.bounds
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
