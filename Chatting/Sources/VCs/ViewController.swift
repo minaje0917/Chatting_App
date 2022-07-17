@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc func startAction() {
         //self.navigationController?.popViewController(animated: true)
-        let lvc = nickNameViewController()
+        let lvc = NickNameViewController()
         lvc.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(lvc, animated: true)
         

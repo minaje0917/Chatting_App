@@ -16,8 +16,8 @@
 		770029AE287D5FC400C7704D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 770029AD287D5FC400C7704D /* SnapKit */; };
 		770029BA287FF73500C7704D /* LogoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 770029B9287FF73500C7704D /* LogoImage.png */; };
 		770029BC287FF7F300C7704D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 770029BB287FF7F300C7704D /* Logo.png */; };
-		770029BF2880322A00C7704D /* nickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770029BE2880322A00C7704D /* nickNameViewController.swift */; };
-		770029C1288134DD00C7704D /* chattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770029C0288134DD00C7704D /* chattingViewController.swift */; };
+		770029BF2880322A00C7704D /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770029BE2880322A00C7704D /* NickNameViewController.swift */; };
+		770029C1288134DD00C7704D /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770029C0288134DD00C7704D /* ChattingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		770029A3287D119B00C7704D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		770029B9287FF73500C7704D /* LogoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoImage.png; path = ../../LogoImage.png; sourceTree = "<group>"; };
 		770029BB287FF7F300C7704D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Logo.png; sourceTree = "<group>"; };
-		770029BE2880322A00C7704D /* nickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nickNameViewController.swift; sourceTree = "<group>"; };
-		770029C0288134DD00C7704D /* chattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chattingViewController.swift; sourceTree = "<group>"; };
+		770029BE2880322A00C7704D /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
+		770029C0288134DD00C7704D /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				77002999287D119700C7704D /* ViewController.swift */,
-				770029BE2880322A00C7704D /* nickNameViewController.swift */,
-				770029C0288134DD00C7704D /* chattingViewController.swift */,
+				770029BE2880322A00C7704D /* NickNameViewController.swift */,
+				770029C0288134DD00C7704D /* ChattingViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -232,10 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770029BF2880322A00C7704D /* nickNameViewController.swift in Sources */,
+				770029BF2880322A00C7704D /* NickNameViewController.swift in Sources */,
 				7700299A287D119700C7704D /* ViewController.swift in Sources */,
 				77002996287D119700C7704D /* AppDelegate.swift in Sources */,
-				770029C1288134DD00C7704D /* chattingViewController.swift in Sources */,
+				770029C1288134DD00C7704D /* ChattingViewController.swift in Sources */,
 				77002998287D119700C7704D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
