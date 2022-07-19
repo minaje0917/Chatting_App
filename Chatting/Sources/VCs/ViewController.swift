@@ -24,10 +24,10 @@ final class ViewController: UIViewController, UITextFieldDelegate {
         //$0.textColor = .black
         //$0.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         
-        let attributedString = NSMutableAttributedString(string: ($0.text!), attributes: [.font: UIFont.systemFont(ofSize: 24, weight: .medium), .foregroundColor: UIColor.black,])
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 30, weight: .medium), range: ($0.text! as NSString).range(of: "W"))
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 30, weight: .medium), range: ($0.text! as NSString).range(of: "A"))
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 30, weight: .medium), range: ($0.text! as NSString).range(of: "Y"))
+        let attributedString = NSMutableAttributedString(string: ($0.text!), attributes: [.font: UIFont(name: "NotoSansKR-Medium", size: 24)!, .foregroundColor: UIColor.black,])
+        attributedString.addAttribute(.font, value: UIFont(name: "NotoSansKR-Medium", size: 30)!, range: ($0.text! as NSString).range(of: "W"))
+        attributedString.addAttribute(.font, value: UIFont(name: "NotoSansKR-Medium", size: 30)!, range: ($0.text! as NSString).range(of: "A"))
+        attributedString.addAttribute(.font, value: UIFont(name: "NotoSansKR-Medium", size: 30)!, range: ($0.text! as NSString).range(of: "Y"))
         $0.attributedText = attributedString
         
     }
@@ -35,7 +35,7 @@ final class ViewController: UIViewController, UITextFieldDelegate {
     lazy var startButton = UIButton().then {
         let text = NSAttributedString(string: "시작하기")
         $0.setAttributedTitle(text, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        $0.titleLabel?.font = UIFont(name: "NotoSansKR-Medium", size: 18)
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.backgroundColor = .mainColor
         $0.layer.cornerRadius = 10
@@ -50,12 +50,12 @@ final class ViewController: UIViewController, UITextFieldDelegate {
         $0.numberOfLines = 3
         $0.text = "Who Are You 는 익명의상대와 편하게 대화할 수 있는  익명 채팅 서비스입니다."
         $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 22, weight: .light)
+        //$0.font = UIFont(name: "NotoSansKR-Light", size: 22)
         $0.textAlignment = .center
         
-        let attributedString = NSMutableAttributedString(string: ($0.text!), attributes: [.font: UIFont.systemFont(ofSize: 22, weight: .light), .foregroundColor: UIColor.black, .kern: 1.0])
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명"))
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 22, weight: .medium), range: ($0.text! as NSString).range(of: "익명 채팅 서비스"))
+        let attributedString = NSMutableAttributedString(string: ($0.text!), attributes: [.font: UIFont(name: "NotoSansKR-Light", size: 22)!, .foregroundColor: UIColor.black, .kern: 1.0])
+        attributedString.addAttribute(.font, value: UIFont(name: "NotoSansKR-Regular", size: 22)!, range: ($0.text! as NSString).range(of: "익명"))
+        attributedString.addAttribute(.font, value: UIFont(name: "NotoSansKR-Regular", size: 22)!, range: ($0.text! as NSString).range(of: "익명 채팅 서비스"))
         $0.attributedText = attributedString
     }   
     
@@ -122,3 +122,13 @@ extension UIColor {
     class var placeholder: UIColor? {return UIColor(named: "placeholder")}
 }
 
+
+//extension UIFont {
+//    enum Family: String {
+//        case Black, Bold, Light, Medium, Regular, Thin
+//    }
+//
+//    static func NotoSansKR(size: CGFloat = 10, Family = .Regular) -> UIFont {
+//        return UIFont(name: "NotoSansKR-\(family)", size: size)
+//    }
+//}

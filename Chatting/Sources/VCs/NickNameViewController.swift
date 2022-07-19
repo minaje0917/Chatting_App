@@ -57,17 +57,17 @@ final class NickNameViewController: UIViewController {
         $0.text = "Who Are You? \n 당신의 닉네임을 입력하세요"
         $0.numberOfLines = 2
         $0.textAlignment = .center
-        $0.font = UIFont.systemFont(ofSize: 22, weight: .regular)
+        $0.font = UIFont(name: "NotoSansKR-Regular", size: 22)
     }
     
     lazy var wrongText = UILabel().then {
         $0.text = "닉네임을 입력해주세요"
         $0.textColor = .wrong
-        $0.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        $0.font = UIFont(name: "NotoSansKR-Regular", size: 12)
     }
     
     lazy var nickNameField = UITextField().then {
-        $0.attributedPlaceholder = NSAttributedString(string: "닉네임 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.placeholder])
+        $0.attributedPlaceholder = NSAttributedString(string: "닉네임 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.placeholder!])
         $0.textAlignment = .center
         $0.layer.cornerRadius = 25
         $0.layer.backgroundColor = UIColor.white.cgColor
@@ -80,7 +80,7 @@ final class NickNameViewController: UIViewController {
     lazy var enterButton = UIButton().then {
         let text = NSAttributedString(string: "입장하기")
         $0.setAttributedTitle(text, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        $0.titleLabel?.font = UIFont(name: "NotoSansKR-Medium", size: 18)
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.backgroundColor = .mainColor
         $0.layer.cornerRadius = 10
@@ -96,7 +96,7 @@ final class NickNameViewController: UIViewController {
         else {
             nickNameField.layer.borderWidth = 2
             nickNameField.layer.borderColor = UIColor.wrong?.cgColor
-            nickNameField.attributedPlaceholder = NSAttributedString(string: "닉네임 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.wrong])
+            nickNameField.attributedPlaceholder = NSAttributedString(string: "닉네임 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.wrong!])
             view.addSubview(wrongText)
             wrongText.snp.makeConstraints {
                 $0.centerX.equalToSuperview()
