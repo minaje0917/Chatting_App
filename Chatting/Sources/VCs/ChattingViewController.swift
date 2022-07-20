@@ -22,10 +22,20 @@ final class ChattingViewController: UIViewController {
         configNavigation()
     }
     
+    @objc func buttonTappedAction() {
+        
+    }
+    
 }
 
 private extension ChattingViewController {
     func configNavigation() {
         self.navigationItem.titleView = navigationTitleLabel
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        title: "나가기",
+        style: .plain,
+        target: self,
+        action: #selector(buttonTappedAction)
+        )
     }
 }
