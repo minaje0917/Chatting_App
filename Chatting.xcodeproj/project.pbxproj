@@ -24,6 +24,7 @@
 		779FD89728862B0B0093B90F /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89128862B0B0093B90F /* NotoSansKR-Regular.otf */; };
 		779FD89828862B0B0093B90F /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89228862B0B0093B90F /* NotoSansKR-Black.otf */; };
 		779FD89928862B0B0093B90F /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89328862B0B0093B90F /* NotoSansKR-Medium.otf */; };
+		779FD89B288A73D30093B90F /* barButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89A288A73D30093B90F /* barButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		779FD89128862B0B0093B90F /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		779FD89228862B0B0093B90F /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		779FD89328862B0B0093B90F /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		779FD89A288A73D30093B90F /* barButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				770029C328813D4C00C7704D /* Resources */,
 				770029C228813D4000C7704D /* Sources */,
 				770029A3287D119B00C7704D /* Info.plist */,
+				779FD89A288A73D30093B90F /* barButton.png */,
 				770029B9287FF73500C7704D /* LogoImage.png */,
 				770029BB287FF7F300C7704D /* Logo.png */,
 			);
@@ -238,6 +241,7 @@
 			files = (
 				779FD89828862B0B0093B90F /* NotoSansKR-Black.otf in Resources */,
 				779FD89528862B0B0093B90F /* NotoSansKR-Light.otf in Resources */,
+				779FD89B288A73D30093B90F /* barButton.png in Resources */,
 				779FD89928862B0B0093B90F /* NotoSansKR-Medium.otf in Resources */,
 				779FD89628862B0B0093B90F /* NotoSansKR-Bold.otf in Resources */,
 				770029BC287FF7F300C7704D /* Logo.png in Resources */,
