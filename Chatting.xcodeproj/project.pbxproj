@@ -14,8 +14,6 @@
 		7700299F287D119B00C7704D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7700299E287D119B00C7704D /* Assets.xcassets */; };
 		770029AB287D5F9B00C7704D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 770029AA287D5F9B00C7704D /* Then */; };
 		770029AE287D5FC400C7704D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 770029AD287D5FC400C7704D /* SnapKit */; };
-		770029BA287FF73500C7704D /* LogoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 770029B9287FF73500C7704D /* LogoImage.png */; };
-		770029BC287FF7F300C7704D /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 770029BB287FF7F300C7704D /* Logo.png */; };
 		770029BF2880322A00C7704D /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770029BE2880322A00C7704D /* NickNameViewController.swift */; };
 		770029C1288134DD00C7704D /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770029C0288134DD00C7704D /* ChattingViewController.swift */; };
 		779FD89428862B0B0093B90F /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 779FD88E28862B0B0093B90F /* NotoSansKR-Thin.otf */; };
@@ -25,6 +23,8 @@
 		779FD89828862B0B0093B90F /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89228862B0B0093B90F /* NotoSansKR-Black.otf */; };
 		779FD89928862B0B0093B90F /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89328862B0B0093B90F /* NotoSansKR-Medium.otf */; };
 		779FD89B288A73D30093B90F /* barButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89A288A73D30093B90F /* barButton.png */; };
+		779FD8A2289114770093B90F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD8A0289114770093B90F /* Logo.png */; };
+		779FD8A3289114770093B90F /* LogoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD8A1289114770093B90F /* LogoImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,6 @@
 		7700299C287D119700C7704D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7700299E287D119B00C7704D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		770029A3287D119B00C7704D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		770029B9287FF73500C7704D /* LogoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoImage.png; path = ../../LogoImage.png; sourceTree = "<group>"; };
-		770029BB287FF7F300C7704D /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Logo.png; sourceTree = "<group>"; };
 		770029BE2880322A00C7704D /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		770029C0288134DD00C7704D /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		779FD88E28862B0B0093B90F /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
@@ -46,6 +44,8 @@
 		779FD89228862B0B0093B90F /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		779FD89328862B0B0093B90F /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		779FD89A288A73D30093B90F /* barButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barButton.png; sourceTree = "<group>"; };
+		779FD8A0289114770093B90F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Logo.png; sourceTree = "<group>"; };
+		779FD8A1289114770093B90F /* LogoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoImage.png; path = ../../LogoImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +84,8 @@
 				770029C228813D4000C7704D /* Sources */,
 				770029A3287D119B00C7704D /* Info.plist */,
 				779FD89A288A73D30093B90F /* barButton.png */,
-				770029B9287FF73500C7704D /* LogoImage.png */,
-				770029BB287FF7F300C7704D /* Logo.png */,
+				779FD8A0289114770093B90F /* Logo.png */,
+				779FD8A1289114770093B90F /* LogoImage.png */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -239,15 +239,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779FD8A3289114770093B90F /* LogoImage.png in Resources */,
 				779FD89828862B0B0093B90F /* NotoSansKR-Black.otf in Resources */,
 				779FD89528862B0B0093B90F /* NotoSansKR-Light.otf in Resources */,
+				779FD8A2289114770093B90F /* Logo.png in Resources */,
 				779FD89B288A73D30093B90F /* barButton.png in Resources */,
 				779FD89928862B0B0093B90F /* NotoSansKR-Medium.otf in Resources */,
 				779FD89628862B0B0093B90F /* NotoSansKR-Bold.otf in Resources */,
-				770029BC287FF7F300C7704D /* Logo.png in Resources */,
 				7700299F287D119B00C7704D /* Assets.xcassets in Resources */,
 				7700299D287D119700C7704D /* Main.storyboard in Resources */,
-				770029BA287FF73500C7704D /* LogoImage.png in Resources */,
 				779FD89728862B0B0093B90F /* NotoSansKR-Regular.otf in Resources */,
 				779FD89428862B0B0093B90F /* NotoSansKR-Thin.otf in Resources */,
 			);

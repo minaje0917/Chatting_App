@@ -22,6 +22,11 @@ final class ChattingViewController: UIViewController {
         $0.backgroundColor = .backView
     }
     
+    private let chattingField = UITextField().then {
+        $0.backgroundColor = .white
+        $0.layer.cornerRadius = 16
+    }
+    
     private let navigationBarButton = UIButton().then {
         let text = NSAttributedString(string: "퇴장")
         $0.setAttributedTitle(text, for: .normal)
@@ -41,7 +46,7 @@ final class ChattingViewController: UIViewController {
     }
     
     private func addView() {
-        [navigationBarButton,backView].forEach {
+        [navigationBarButton,backView,chattingField].forEach {
             view.addSubview($0)
         }
     }
@@ -49,6 +54,19 @@ final class ChattingViewController: UIViewController {
     private func setLayout() {
         navigationBarButton.snp.makeConstraints {
             $0.width.equalTo(70)
+            $0.height.equalTo(30)
+        }
+        backView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.trailing.equalToSuperview().offset(0)
+            $0.height.equalTo(80)
+        }
+        chattingField.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(backView.snp.bottom).offset(-36 )
+            $0.trailing.equalToSuperview().offset(-59)
+            $0.leading.equalToSuperview().offset(16)
             $0.height.equalTo(30)
         }
     }
