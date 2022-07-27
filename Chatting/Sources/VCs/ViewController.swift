@@ -120,6 +120,7 @@ extension UIColor {
     class var mainColor: UIColor? {return UIColor(named: "mainColor")}
     class var wrong: UIColor? {return UIColor(named: "wrong")}
     class var placeholder: UIColor? {return UIColor(named: "placeholder")}
+    class var backView: UIColor? {return UIColor(named: "backView")}
 }
 
 

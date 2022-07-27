@@ -17,6 +17,11 @@ final class ChattingViewController: UIViewController {
         $0.font = UIFont(name: "NotoSansKR-Medium", size: 22)
         $0.textColor = .black
     }
+    
+    private let backView = UIView().then {
+        $0.backgroundColor = .backView
+    }
+    
     private let navigationBarButton = UIButton().then {
         let text = NSAttributedString(string: "퇴장")
         $0.setAttributedTitle(text, for: .normal)
@@ -36,7 +41,7 @@ final class ChattingViewController: UIViewController {
     }
     
     private func addView() {
-        [navigationBarButton].forEach {
+        [navigationBarButton,backView].forEach {
             view.addSubview($0)
         }
     }
