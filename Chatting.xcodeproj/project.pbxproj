@@ -25,6 +25,7 @@
 		779FD89B288A73D30093B90F /* barButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD89A288A73D30093B90F /* barButton.png */; };
 		779FD8A2289114770093B90F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD8A0289114770093B90F /* Logo.png */; };
 		779FD8A3289114770093B90F /* LogoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD8A1289114770093B90F /* LogoImage.png */; };
+		779FD8A528926A8F0093B90F /* sentButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 779FD8A428926A8F0093B90F /* sentButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		779FD89A288A73D30093B90F /* barButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barButton.png; sourceTree = "<group>"; };
 		779FD8A0289114770093B90F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Logo.png; sourceTree = "<group>"; };
 		779FD8A1289114770093B90F /* LogoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoImage.png; path = ../../LogoImage.png; sourceTree = "<group>"; };
+		779FD8A428926A8F0093B90F /* sentButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sentButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				779FD89A288A73D30093B90F /* barButton.png */,
 				779FD8A0289114770093B90F /* Logo.png */,
 				779FD8A1289114770093B90F /* LogoImage.png */,
+				779FD8A428926A8F0093B90F /* sentButton.png */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				7700299D287D119700C7704D /* Main.storyboard in Resources */,
 				779FD89728862B0B0093B90F /* NotoSansKR-Regular.otf in Resources */,
 				779FD89428862B0B0093B90F /* NotoSansKR-Thin.otf in Resources */,
+				779FD8A528926A8F0093B90F /* sentButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
